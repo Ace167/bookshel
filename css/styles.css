@@ -11,12 +11,22 @@ body {
 	font-family:
 		system-ui,
 		-apple-system,
-		Courier New,
+		BlinkMacSystemFont,
+		'Segoe UI',
+		Roboto,
+		Oxygen,
+		Ubuntu,
+		Cantarell,
 		sans-serif;
 	line-height: 1.5;
 	overflow-wrap: break-word;
+	background-color: #f8fafc;
+	color: #0f172a;
 }
 
+/* =========================================
+   NAVIGATIE (Boven-midden, professioneel)
+   ========================================= */
 nav {
 	display: flex;
 	justify-content: center;
@@ -24,14 +34,17 @@ nav {
 	width: 100%;
 	padding: 1.25rem 1rem;
 	background-color: #000000;
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+	position: sticky;
+	top: 0;
+	z-index: 100;
 }
 
 .nav-links {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	gap: 1.25rem;
+	gap: 1rem;
 	list-style: none;
 }
 
@@ -39,17 +52,18 @@ nav {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	width: 140px;
-	padding: 0.65rem 1rem;
+	min-width: 150px;
+	padding: 0.65rem 1.25rem;
 	background-color: #ffffff;
 	color: #000000;
 	text-decoration: none;
 	font-weight: 600;
-	font-size: 0.95rem;
+	font-size: 0.9rem;
 	border-radius: 8px;
 	border: 1px solid rgba(255, 255, 255, 0.2);
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25), 0 2px 4px rgba(255, 255, 255, 0.1);
 	transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+	text-align: center;
 }
 
 .nav-links a::before {
@@ -80,31 +94,858 @@ nav {
 	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
+html {
+	scroll-behavior: smooth;
+}
 
-/* Standaard (mobiel: 1 kolom) */
+.nav-links a.active-nav {
+	background-color: #0f172a;
+	color: #ffffff;
+	border-color: rgba(255, 255, 255, 0.6);
+	box-shadow: 0 4px 14px rgba(255, 255, 255, 0.2);
+}
+
+.nav-links a.active-nav::before {
+	background-color: #ffffff;
+	color: #000000;
+}
+
+/* =========================================
+   LAYOUT & HERO
+   ========================================= */
 .content-wrapper {
+	max-width: 1050px;
+	margin: 0 auto;
+	padding: 2.5rem 1.25rem 5rem 1.25rem;
 	display: flex;
 	flex-direction: column;
-	gap: 1rem;
-	padding: 1rem;
+	gap: 2rem;
+	scroll-margin-top: 100px;
+}
+
+.timeline-view {
+	scroll-margin-top: 100px;
+}
+
+.placeholder-shelf-card {
+	background: #ffffff;
+	border: 1px dashed #cbd5e1;
+	border-radius: 16px;
+	padding: 3.5rem 1.5rem;
+	max-width: 580px;
+	margin: 2rem auto 0 auto;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+	text-align: center;
+}
+
+.shelf-icon {
+	font-size: 3.25rem;
+	margin-bottom: 1rem;
+}
+
+.placeholder-shelf-card h3 {
+	font-size: 1.3rem;
+	font-weight: 800;
+	color: #0f172a;
+	margin-bottom: 0.5rem;
+}
+
+.placeholder-shelf-card p {
+	color: #64748b;
+	font-size: 0.95rem;
+	line-height: 1.6;
+}
+
+
+/* =========================================
+   HOME / LANDINGSPAGINA
+   ========================================= */
+.landing-hero {
+	text-align: center;
+	padding: 1.5rem 0 2rem 0;
+	max-width: 840px;
+	margin: 0 auto;
+}
+
+.landing-title {
+	font-size: 2.5rem;
+	font-weight: 800;
+	color: #0f172a;
+	line-height: 1.2;
+	margin-bottom: 1rem;
+	letter-spacing: -0.02em;
+}
+
+.landing-intro {
+	font-size: 1.1rem;
+	color: #475569;
+	line-height: 1.7;
+}
+
+.pillars-section,
+.philosophy-section {
+	margin-top: 1rem;
+}
+
+.section-title {
+	font-size: 1.4rem;
+	font-weight: 800;
+	color: #0f172a;
+	margin-bottom: 1.5rem;
+	text-align: center;
+}
+
+/* De Twee Zuilen Grid */
+.pillars-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	gap: 1.75rem;
+}
+
+.pillar-card {
+	background: #ffffff;
+	border: 1px solid #e2e8f0;
+	border-radius: 16px;
+	padding: 2.25rem 2rem;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+	display: flex;
+	flex-direction: column;
+	transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.pillar-card:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+	border-color: #cbd5e1;
+}
+
+.pillar-card.highlight-card {
+	border: 2px solid #0f172a;
+	box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+.pillar-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1.25rem;
+}
+
+.pillar-icon {
+	font-size: 2.75rem;
+	line-height: 1;
+}
+
+.pillar-badge {
+	background: #0f172a;
+	color: #ffffff;
+	font-size: 0.75rem;
+	font-weight: 700;
+	padding: 0.3rem 0.75rem;
+	border-radius: 9999px;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+}
+
+.pillar-badge.badge-secondary {
+	background: #f1f5f9;
+	color: #475569;
+	border: 1px solid #cbd5e1;
+}
+
+.pillar-title {
+	font-size: 1.4rem;
+	font-weight: 800;
+	color: #0f172a;
+	margin-bottom: 0.6rem;
+}
+
+.pillar-desc {
+	font-size: 0.95rem;
+	color: #475569;
+	line-height: 1.6;
+	margin-bottom: 1.25rem;
+	flex-grow: 1;
+}
+
+.pillar-stats {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.4rem;
+	margin-bottom: 1.25rem;
+}
+
+.stat-pill {
+	background: #f8fafc;
+	border: 1px solid #e2e8f0;
+	color: #334155;
+	font-size: 0.75rem;
+	font-weight: 700;
+	padding: 0.3rem 0.65rem;
+	border-radius: 9999px;
+}
+
+.pillar-books {
+	background: #f8fafc;
+	border-left: 3px solid #0f172a;
+	padding: 0.75rem 1rem;
+	border-radius: 0 8px 8px 0;
+	font-size: 0.85rem;
+	color: #475569;
+	margin-bottom: 1.5rem;
+	line-height: 1.5;
+}
+
+.pillar-btn {
+	width: 100%;
+	padding: 0.85rem 1.25rem;
+	border-radius: 8px;
+	font-size: 0.95rem;
+	font-weight: 700;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	text-align: center;
+	border: none;
+}
+
+.primary-btn {
+	background-color: #0f172a;
+	color: #ffffff;
+	box-shadow: 0 4px 12px rgba(15, 23, 42, 0.25);
+}
+
+.primary-btn:hover {
+	background-color: #1e293b;
+	transform: translateY(-1px);
+	box-shadow: 0 6px 16px rgba(15, 23, 42, 0.35);
+}
+
+.secondary-btn {
+	background-color: #ffffff;
+	color: #0f172a;
+	border: 1px solid #cbd5e1;
+}
+
+.secondary-btn:hover {
+	background-color: #f1f5f9;
+	border-color: #0f172a;
+}
+
+/* Filosofie Grid */
+.philosophy-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+	gap: 1.25rem;
+}
+
+.philosophy-card {
+	background: #ffffff;
+	border: 1px solid #e2e8f0;
+	border-radius: 12px;
+	padding: 1.5rem;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+.phil-icon {
+	font-size: 2rem;
+	margin-bottom: 0.75rem;
+	display: block;
+}
+
+.philosophy-card h4 {
+	font-size: 1.1rem;
+	font-weight: 700;
+	color: #0f172a;
+	margin-bottom: 0.5rem;
+}
+
+.philosophy-card p {
+	font-size: 0.9rem;
+	color: #64748b;
+	line-height: 1.6;
+}
+
+/* Landing CTA Banner */
+.landing-cta-banner {
+	background: #0f172a;
+	color: #ffffff;
+	border-radius: 16px;
+	padding: 3rem 2rem;
+	text-align: center;
+	box-shadow: 0 10px 30px rgba(15, 23, 42, 0.2);
+	margin-top: 1rem;
+}
+
+.landing-cta-banner h3 {
+	font-size: 1.6rem;
+	font-weight: 800;
+	margin-bottom: 0.5rem;
+}
+
+.landing-cta-banner p {
+	color: #cbd5e1;
+	font-size: 1.05rem;
+	margin-bottom: 1.75rem;
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.cta-large {
+	background-color: #ffffff !important;
+	color: #0f172a !important;
+	font-size: 1rem !important;
+	padding: 0.85rem 1.75rem !important;
+	border-radius: 8px !important;
+	font-weight: 700 !important;
+	box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3) !important;
+}
+
+.cta-large:hover {
+	background-color: #f1f5f9 !important;
+	transform: translateY(-2px);
+	box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4) !important;
+}
+
+
+.timeline-hero {
+	text-align: center;
+	padding-bottom: 2rem;
+	border-bottom: 1px solid #e2e8f0;
+}
+
+.hero-badge {
+	display: inline-block;
+	background: #0f172a;
+	color: #ffffff;
+	font-weight: 700;
+	font-size: 0.8rem;
+	padding: 0.35rem 0.95rem;
+	border-radius: 9999px;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	margin-bottom: 1rem;
+	box-shadow: 0 2px 6px rgba(15, 23, 42, 0.2);
+}
+
+.hero-title {
+	font-size: 2.4rem;
+	font-weight: 800;
+	color: #0f172a;
+	line-height: 1.2;
+	margin-bottom: 0.85rem;
+}
+
+.hero-subtitle {
+	color: #475569;
+	font-size: 1.05rem;
+	line-height: 1.65;
+	max-width: 820px;
+	margin: 0 auto 1.75rem auto;
+}
+
+/* Controls */
+.timeline-controls {
+	display: flex;
+	flex-direction: column;
+	gap: 1.25rem;
+	align-items: center;
 	width: 100%;
 }
 
-/* Tablet en groter */
-@media (min-width: 768px) {
-	.content-wrapper {
-		flex-direction: row;
-		gap: 2rem;
-		padding: 2rem;
-	}
+.search-and-select-bar {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	width: 100%;
+	max-width: 720px;
+	justify-content: center;
+	align-items: center;
 }
 
-/* Desktop */
-@media (min-width: 1024px) {
-	.content-wrapper {
-		max-width: 1200px;
-		margin: 0 auto;
-	}
+.search-box {
+	flex: 1 1 360px;
+}
+
+.search-box input {
+	width: 100%;
+	padding: 0.75rem 1.25rem;
+	border: 1px solid #cbd5e1;
+	border-radius: 9999px;
+	font-size: 0.95rem;
+	background-color: #ffffff;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+	outline: none;
+	transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.search-box input:focus {
+	border-color: #0f172a;
+	box-shadow: 0 0 0 3px rgba(15, 23, 42, 0.1);
+}
+
+.source-filter-box {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	background: #ffffff;
+	padding: 0.35rem 0.85rem;
+	border-radius: 9999px;
+	border: 1px solid #cbd5e1;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.filter-label {
+	font-size: 0.85rem;
+	font-weight: 700;
+	color: #475569;
+}
+
+.source-select {
+	border: none;
+	background: transparent;
+	font-size: 0.85rem;
+	font-weight: 600;
+	color: #0f172a;
+	outline: none;
+	cursor: pointer;
+}
+
+.filter-group {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 0.5rem;
+}
+
+.filter-btn {
+	background: #ffffff;
+	border: 1px solid #cbd5e1;
+	color: #475569;
+	padding: 0.45rem 1rem;
+	border-radius: 9999px;
+	font-weight: 600;
+	font-size: 0.85rem;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+	background: #f1f5f9;
+	color: #0f172a;
+	border-color: #94a3b8;
+}
+
+.filter-btn.active {
+	background: #0f172a;
+	color: #ffffff;
+	border-color: #0f172a;
+	box-shadow: 0 2px 6px rgba(15, 23, 42, 0.2);
+}
+
+.controls-footer {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	max-width: 820px;
+	gap: 1rem;
+	padding-top: 0.5rem;
+}
+
+.stats-text {
+	font-size: 0.85rem;
+	font-weight: 700;
+	color: #64748b;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+}
+
+.view-actions {
+	display: flex;
+	gap: 0.75rem;
+}
+
+.action-btn {
+	background: #ffffff;
+	border: 1px solid #cbd5e1;
+	color: #334155;
+	padding: 0.4rem 0.9rem;
+	border-radius: 6px;
+	font-size: 0.8rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.2s;
+}
+
+.action-btn:hover {
+	background: #f1f5f9;
+	color: #0f172a;
+}
+
+/* =========================================
+   TIJDSLIJN
+   ========================================= */
+.timeline-section {
+	position: relative;
+}
+
+.timeline {
+	position: relative;
+	padding: 1.5rem 0 3rem 2.75rem;
+}
+
+/* De centrale verticale tijdlijnlijn */
+.timeline::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 14px;
+	width: 3px;
+	background: #cbd5e1;
+	border-radius: 2px;
+}
+
+/* Tijdperk Header Divider */
+.timeline-period-header {
+	margin: 3rem 0 1.75rem -1.75rem;
+	position: relative;
+	z-index: 2;
+}
+
+.period-pill {
+	display: inline-block;
+	background: #0f172a;
+	color: #ffffff;
+	padding: 0.5rem 1.25rem;
+	border-radius: 9999px;
+	font-size: 0.85rem;
+	font-weight: 800;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	box-shadow: 0 4px 12px rgba(15, 23, 42, 0.2);
+}
+
+/* Tijdlijn item */
+.timeline-item {
+	position: relative;
+	margin-bottom: 2rem;
+}
+
+/* Marker / bolletje */
+.timeline-marker {
+	position: absolute;
+	left: -2.75rem;
+	top: 1.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 32px;
+	height: 32px;
+	z-index: 2;
+}
+
+.marker-dot {
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background: #ffffff;
+	border: 3px solid #0f172a;
+	box-shadow: 0 0 0 4px #f8fafc;
+	transition: all 0.25s ease;
+}
+
+.timeline-item.has-expanded-source .marker-dot {
+	background: #0f172a;
+	border-color: #ffffff;
+	box-shadow: 0 0 0 4px rgba(15, 23, 42, 0.3);
+	transform: scale(1.25);
+}
+
+/* Hoofdkaart voor het tijdlijnpunt */
+.timeline-card {
+	background: #ffffff;
+	border: 1px solid #e2e8f0;
+	border-radius: 14px;
+	box-shadow: 0 3px 8px rgba(0, 0, 0, 0.04);
+	transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+	overflow: hidden;
+}
+
+.timeline-card:hover {
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+	border-color: #cbd5e1;
+}
+
+/* Header blok van het tijdlijnpunt */
+.timeline-header-block {
+	padding: 1.5rem 1.75rem 1.25rem 1.75rem;
+	border-bottom: 1px solid #f1f5f9;
+}
+
+.header-top-row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	align-items: center;
+	margin-bottom: 0.6rem;
+}
+
+.era-badge {
+	background: #0f172a;
+	color: #ffffff;
+	padding: 0.25rem 0.65rem;
+	border-radius: 6px;
+	font-size: 0.75rem;
+	font-weight: 700;
+	letter-spacing: 0.03em;
+}
+
+.period-badge {
+	background: #f1f5f9;
+	color: #475569;
+	padding: 0.25rem 0.65rem;
+	border-radius: 6px;
+	font-size: 0.75rem;
+	font-weight: 700;
+}
+
+.milestone-title {
+	font-size: 1.3rem;
+	font-weight: 800;
+	color: #0f172a;
+	line-height: 1.3;
+	margin-bottom: 0.35rem;
+}
+
+.milestone-tagline {
+	font-size: 0.95rem;
+	color: #475569;
+	line-height: 1.55;
+}
+
+/* =========================================
+   BRONNEN / BOEKEN SECTIE (MULTI-SOURCE)
+   ========================================= */
+.sources-container {
+	padding: 1rem 1.75rem 1.5rem 1.75rem;
+	background: #fafbfc;
+}
+
+.sources-header {
+	margin-bottom: 0.75rem;
+}
+
+.sources-label {
+	font-size: 0.85rem;
+	font-weight: 800;
+	color: #334155;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+}
+
+.sources-list {
+	display: flex;
+	flex-direction: column;
+	gap: 0.85rem;
+}
+
+/* Bron-kaart binnen het tijdlijnpunt */
+.source-card {
+	background: #ffffff;
+	border: 1px solid #e2e8f0;
+	border-radius: 10px;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+	overflow: hidden;
+	transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.source-card:hover {
+	border-color: #cbd5e1;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.source-card.expanded {
+	border-color: #94a3b8;
+	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.07);
+}
+
+/* Klikbare knop om een specifieke bron uit te vouwen */
+.source-toggle-btn {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1rem;
+	padding: 1rem 1.25rem;
+	background: none;
+	border: none;
+	text-align: left;
+	cursor: pointer;
+	font-family: inherit;
+	transition: background-color 0.15s ease;
+}
+
+.source-toggle-btn:hover {
+	background-color: #f8fafc;
+}
+
+.source-meta {
+	display: flex;
+	flex-direction: column;
+	gap: 0.2rem;
+}
+
+.book-badge {
+	font-size: 0.8rem;
+	font-weight: 700;
+	color: #0f172a;
+}
+
+.source-author {
+	font-size: 0.78rem;
+	color: #64748b;
+}
+
+.source-chapter {
+	font-size: 0.95rem;
+	color: #1e293b;
+	margin-top: 0.15rem;
+}
+
+.source-action {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4rem;
+	background: #0f172a;
+	color: #ffffff;
+	padding: 0.45rem 0.85rem;
+	border-radius: 6px;
+	font-size: 0.8rem;
+	font-weight: 600;
+	white-space: nowrap;
+	flex-shrink: 0;
+	transition: background-color 0.2s;
+}
+
+.source-card.expanded .source-action {
+	background-color: #334155;
+}
+
+.toggle-icon {
+	font-size: 0.9rem;
+	font-weight: 800;
+}
+
+/* Uitgevouwen inhoud van de bron */
+.source-content {
+	background: #ffffff;
+	border-top: 1px solid #f1f5f9;
+}
+
+.summary-inner {
+	padding: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1.25rem;
+}
+
+.summary-section h4 {
+	font-size: 0.95rem;
+	font-weight: 700;
+	color: #0f172a;
+	margin-bottom: 0.5rem;
+	display: flex;
+	align-items: center;
+	gap: 0.4rem;
+}
+
+/* Kernboodschap box */
+.kernboodschap-box {
+	background: #f8fafc;
+	border-left: 4px solid #0f172a;
+	padding: 1rem 1.25rem;
+	border-radius: 0 8px 8px 0;
+	font-size: 0.95rem;
+	line-height: 1.6;
+	color: #1e293b;
+}
+
+/* Uitgebreide inhoud */
+.inhoud-box p {
+	margin-bottom: 0.85rem;
+	color: #334155;
+	font-size: 0.95rem;
+	line-height: 1.7;
+}
+
+.inhoud-box p:last-child {
+	margin-bottom: 0;
+}
+
+/* Voorbeeld box */
+.voorbeeld-box {
+	background: #f1f5f9;
+	border: 1px solid #e2e8f0;
+	padding: 1rem 1.25rem;
+	border-radius: 8px;
+	font-size: 0.95rem;
+	line-height: 1.6;
+	color: #1e293b;
+}
+
+/* Takeaways box */
+.takeaways-box {
+	background: #ffffff;
+	border: 1px solid #e2e8f0;
+	border-radius: 8px;
+	padding: 1.25rem;
+}
+
+.takeaways-box ul {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 0.7rem;
+	margin-top: 0.5rem;
+}
+
+.takeaways-box li {
+	display: flex;
+	align-items: flex-start;
+	font-size: 0.95rem;
+	line-height: 1.55;
+	color: #334155;
+}
+
+.takeaways-box li::before {
+	content: "✓";
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 18px;
+	height: 18px;
+	margin-right: 0.6rem;
+	margin-top: 0.15rem;
+	border-radius: 50%;
+	background-color: #0f172a;
+	color: #ffffff;
+	font-size: 0.7rem;
+	font-weight: 700;
+	line-height: 1;
+	flex-shrink: 0;
+}
+
+/* No results fallback */
+.no-results {
+	padding: 3rem 1rem;
+	text-align: center;
+	color: #64748b;
+	background: #ffffff;
+	border-radius: 12px;
+	border: 1px dashed #cbd5e1;
 }
 
 /* Responsieve media */
@@ -114,4 +955,69 @@ iframe {
 	max-width: 100%;
 	height: auto;
 	display: block;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN (Media Queries)
+   ========================================= */
+@media (max-width: 768px) {
+	.hero-title {
+		font-size: 1.85rem;
+	}
+
+	.source-toggle-btn {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.75rem;
+	}
+
+	.source-action {
+		align-self: flex-start;
+	}
+
+	.controls-footer {
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+@media (max-width: 480px) {
+	.timeline {
+		padding-left: 2rem;
+	}
+
+	.timeline::before {
+		left: 10px;
+	}
+
+	.timeline-marker {
+		left: -2rem;
+		width: 24px;
+		height: 24px;
+	}
+
+	.marker-dot {
+		width: 12px;
+		height: 12px;
+	}
+
+	.timeline-period-header {
+		margin-left: -1.25rem;
+	}
+
+	.hero-title {
+		font-size: 1.45rem;
+	}
+
+	.timeline-header-block,
+	.sources-container,
+	.summary-inner {
+		padding: 1rem;
+	}
+
+	.nav-links a {
+		min-width: 120px;
+		font-size: 0.8rem;
+		padding: 0.5rem 0.75rem;
+	}
 }

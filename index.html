@@ -1,18 +1,194 @@
 <!doctype html>
-<html lang="en">
+<html lang="nl">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="css/styles.css" />
-		<title>Bookshelf</title>
+		<title>Bookshelf | Levend Kennisarchief</title>
 	</head>
 	<body>
-		<nav>
+		<nav id="navbar">
 			<ul class="nav-links">
-				<li><a href="#">Home</a></li>
-				<li><a href="#">To get to know myself</a></li>
-				<li><a href="#">To get to know the world</a></li>
+				<li><a href="#home" id="nav-home" class="active-nav">Home</a></li>
+				<li><a href="#myself-view" id="nav-myself">To get to know myself</a></li>
+				<li><a href="#world-timeline" id="nav-world">To get to know the world</a></li>
 			</ul>
 		</nav>
+
+		<main class="content-wrapper">
+			<!-- =========================================
+			     HOME: LANDINGSPAGINA
+			     ========================================= -->
+			<div id="home-view" class="timeline-view active-view">
+				<header class="landing-hero">
+					<span class="hero-badge">Welkom bij Bookshelf</span>
+					<h1 class="landing-title">Een Levend Archief van Kennis & Zelfinzicht</h1>
+					<p class="landing-intro">
+						Boeken bieden diepgaande antwoorden, maar echte wijsheid ontstaat wanneer we die kennis met elkaar verbinden. 
+						<strong>Bookshelf</strong> structureert inzichten uit toonaangevende werken langs twee fundamentele menselijke ontdekkingsreizen: 
+						het begrijpen van de wereld en het begrijpen van jezelf.
+					</p>
+				</header>
+
+				<!-- De Twee Zuilen -->
+				<section class="pillars-section">
+					<h2 class="section-title">De Twee Zuilen van Bookshelf</h2>
+					<div class="pillars-grid">
+						<!-- Zuil 1: De Wereld -->
+						<article class="pillar-card highlight-card">
+							<div class="pillar-header">
+								<span class="pillar-icon">🌍</span>
+								<div class="pillar-badge">Actieve Kennisbank</div>
+							</div>
+							<h3 class="pillar-title">To Get to Know the World</h3>
+							<p class="pillar-desc">
+								Een centrale, universele tijdlijn langs 13,5 miljard jaar geschiedenis. Van de Oerknal en de Cognitieve Revolutie tot de uitvinding van geld, imperia, wetenschap en kunstmatige intelligentie.
+							</p>
+							<div class="pillar-stats">
+								<span class="stat-pill">⏳ 20 Mijlpalen</span>
+								<span class="stat-pill">🏛️ 8 Tijdperken</span>
+								<span class="stat-pill">📖 Multi-Source Analyse</span>
+							</div>
+							<div class="pillar-books">
+								<strong>Huidige bronnen:</strong> <em>Sapiens</em> (Y.N. Harari) — klaar voor uitbreiding met <em>Het begin van alles</em> (Graeber & Wengrow).
+							</div>
+							<button id="landing-goto-world" class="pillar-btn primary-btn">
+								Verken de Wereld-tijdlijn →
+							</button>
+						</article>
+
+						<!-- Zuil 2: Jezelf -->
+						<article class="pillar-card">
+							<div class="pillar-header">
+								<span class="pillar-icon">🧠</span>
+								<div class="pillar-badge badge-secondary">In Ontwikkeling</div>
+							</div>
+							<h3 class="pillar-title">To Get to Know Myself</h3>
+							<p class="pillar-desc">
+								De innerlijke ontdekkingsreis. Kennis en theorieën over evolutiepsychologie, cognitieve biases, emoties, gewoontes en praktische levensfilosofie. Waarom denken en voelen we zoals we doen?
+							</p>
+							<div class="pillar-stats">
+								<span class="stat-pill">🔍 Evolutiepsychologie</span>
+								<span class="stat-pill">⚡ Mentale Modellen</span>
+								<span class="stat-pill">🧘 Levensfilosofie</span>
+							</div>
+							<div class="pillar-books">
+								<strong>Aankomend:</strong> Werken over introspectie, gedragswetenschap en mentale rust.
+							</div>
+							<button id="landing-goto-myself" class="pillar-btn secondary-btn">
+								Ontdek Zelfkennis →
+							</button>
+						</article>
+					</div>
+				</section>
+
+				<!-- De Filosofie / Hoe het werkt -->
+				<section class="philosophy-section">
+					<h2 class="section-title">Onze Filosofie: Waarom een Tijdlijn?</h2>
+					<div class="philosophy-grid">
+						<div class="philosophy-card">
+							<span class="phil-icon">⏳</span>
+							<h4>Chronologie Boven Losse Boeken</h4>
+							<p>
+								In plaats van boeken te reduceren tot losse samenvattingen, plaatsen we elk inzicht op het daadwerkelijke moment in de geschiedenis waarin het zich afspeelt.
+							</p>
+						</div>
+
+						<div class="philosophy-card">
+							<span class="phil-icon">⚖️</span>
+							<h4>Perspectieven Naast Elkaar</h4>
+							<p>
+								Verschillende auteurs hebben verschillende visies op dezelfde gebeurtenissen. Op één historisch punt zie je direct waar auteurs elkaar versterken of tegenspreken.
+							</p>
+						</div>
+
+						<div class="philosophy-card">
+							<span class="phil-icon">🌱</span>
+							<h4>Oneindig Uitbreidbaar</h4>
+							<p>
+								Elk nieuw boek dat gelezen wordt, voegt een nieuwe laag toe aan het bestaande skelet. Zo groeit je boekenplank uit tot een compleet encyclopedisch denkmodel.
+							</p>
+						</div>
+					</div>
+				</section>
+
+				<!-- Bottom CTA Banner -->
+				<section class="landing-cta-banner">
+					<h3>Klaar om de tijdlijn te verkennen?</h3>
+					<p>Reis mee van de savanne naar de sterren langs de 20 belangrijkste keerpunten van de mensheid.</p>
+					<button id="landing-hero-cta" class="action-btn cta-large">
+						Open de Wereld-tijdlijn (20 Mijlpalen)
+					</button>
+				</section>
+			</div>
+
+			<!-- =========================================
+			     TO GET TO KNOW THE WORLD (TIJDSLIJN)
+			     ========================================= -->
+			<div id="world-timeline" class="timeline-view" hidden>
+				<header class="timeline-hero">
+					<span class="hero-badge">Universele Tijdlijn van de Geschiedenis</span>
+					<h1 class="hero-title">Van de Oerknal tot de Toekomst</h1>
+					<p class="hero-subtitle">
+						Een centrale chronologische tijdlijn van 13,5 miljard jaar evolutie, beschaving en ideeën. Kennis uit verschillende toonaangevende boeken wordt op de exacte plek in de geschiedenis geplaatst om theorieën en perspectieven naast elkaar te ontdekken.
+					</p>
+
+					<div class="timeline-controls">
+						<div class="search-and-select-bar">
+							<div class="search-box">
+								<input
+									type="search"
+									id="timeline-search"
+									placeholder="Zoek op tijdperk, thema of concept (bijv. vuur, jagers, tarwe, geld, imperium, AI)..."
+									aria-label="Zoek in tijdlijn"
+								/>
+							</div>
+							<div class="source-filter-box">
+								<label for="book-filter-select" class="filter-label">Bron:</label>
+								<select id="book-filter-select" class="source-select" aria-label="Filter op bron"></select>
+							</div>
+						</div>
+
+						<div id="period-filter-group" class="filter-group">
+							<!-- Dynamisch gevuld via app.js -->
+						</div>
+
+						<div class="controls-footer">
+							<span id="timeline-stats" class="stats-text">20 mijlpalen op de tijdlijn</span>
+							<div class="view-actions">
+								<button id="expand-all-btn" class="action-btn">Vouw alles uit</button>
+								<button id="collapse-all-btn" class="action-btn">Vouw alles in</button>
+							</div>
+						</div>
+					</div>
+				</header>
+
+				<section class="timeline-section">
+					<div id="timeline-list" class="timeline"></div>
+				</section>
+			</div>
+
+			<!-- =========================================
+			     TO GET TO KNOW MYSELF (ZELFKENNIS)
+			     ========================================= -->
+			<div id="myself-view" class="timeline-view" hidden>
+				<header class="timeline-hero">
+					<span class="hero-badge">Zelfkennis & Psychologie</span>
+					<h1 class="hero-title">To Get to Know Myself</h1>
+					<p class="hero-subtitle">
+						Hier wordt straks de kennisbank voor psychologie, menselijk gedrag, introspectie en persoonlijke filosofie opgebouwd.
+					</p>
+					<div class="placeholder-shelf-card">
+						<div class="shelf-icon">🧠</div>
+						<h3>Kennisbank in voorbereiding</h3>
+						<p>Deze plank is gereserveerd voor boeken en aantekeningen over psychologie, cognitieve biases, gewoontes en filosofie.</p>
+						<button id="switch-to-world-btn" class="action-btn" style="margin-top: 1.25rem;">← Ga naar de Wereld-tijdlijn</button>
+					</div>
+				</header>
+			</div>
+		</main>
+
+		<script src="js/timeline-data.js"></script>
+		<script src="js/app.js"></script>
 	</body>
 </html>
