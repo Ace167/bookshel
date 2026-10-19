@@ -61,22 +61,24 @@
 						<article class="pillar-card">
 							<div class="pillar-header">
 								<span class="pillar-icon">🧠</span>
-								<div class="pillar-badge badge-secondary">In Ontwikkeling</div>
+								<div class="pillar-badge badge-primary">5 Lagen Actief</div>
 							</div>
 							<h3 class="pillar-title">To Get to Know Myself</h3>
 							<p class="pillar-desc">
 								De innerlijke ontdekkingsreis. Kennis en theorieën over evolutiepsychologie, cognitieve biases, emoties, gewoontes en praktische levensfilosofie. Waarom denken en voelen we zoals we doen?
 							</p>
 							<div class="pillar-stats">
-								<span class="stat-pill">🔍 Evolutiepsychologie</span>
-								<span class="stat-pill">⚡ Mentale Modellen</span>
-								<span class="stat-pill">🧘 Levensfilosofie</span>
+								<span class="stat-pill">🧬 Oerbrein</span>
+								<span class="stat-pill">🧠 Cognitie & Biases</span>
+								<span class="stat-pill">❤️ Emotionele Kracht</span>
+								<span class="stat-pill">⚡ Gewoontes</span>
+								<span class="stat-pill">🧭 Levensfilosofie</span>
 							</div>
 							<div class="pillar-books">
-								<strong>Aankomend:</strong> Werken over introspectie, gedragswetenschap en mentale rust.
+								<strong>Inzichten van:</strong> Dale Carnegie (30 hst) & Yuval Noah Harari (Sapiens).
 							</div>
-							<button id="landing-goto-myself" class="pillar-btn secondary-btn">
-								Ontdek Zelfkennis →
+							<button id="landing-goto-myself" class="pillar-btn primary-btn">
+								Ontdek Zelfkennis (31 Analyses) →
 							</button>
 						</article>
 					</div>
@@ -174,21 +176,49 @@
 			<div id="myself-view" class="timeline-view" hidden>
 				<header class="timeline-hero">
 					<span class="hero-badge">Zelfkennis & Psychologie</span>
-					<h1 class="hero-title">To Get to Know Myself</h1>
+					<h1 class="hero-title">De 5 Lagen van het Zelf</h1>
 					<p class="hero-subtitle">
-						Hier wordt straks de kennisbank voor psychologie, menselijk gedrag, introspectie en persoonlijke filosofie opgebouwd.
+						Een diepgaand psychologisch en filosofisch raamwerk: van ons evolutionaire savanne-oerbrein en cognitieve denkfouten tot emotionele veerkracht, duurzame gewoontes en existentiële levenskunst. Kennis uit psychologie en filosofie wordt per laag gekoppeld.
 					</p>
-					<div class="placeholder-shelf-card">
-						<div class="shelf-icon">🧠</div>
-						<h3>Kennisbank in voorbereiding</h3>
-						<p>Deze plank is gereserveerd voor boeken en aantekeningen over psychologie, cognitieve biases, gewoontes en filosofie.</p>
-						<button id="switch-to-world-btn" class="action-btn" style="margin-top: 1.25rem;">← Ga naar de Wereld-tijdlijn</button>
+
+					<div class="timeline-controls">
+						<div class="search-and-select-bar">
+							<div class="search-box">
+								<input
+									type="search"
+									id="myself-search"
+									placeholder="Zoek in de 5 lagen (bijv. oerbrein, glimlach, luisteren, kritiek, leiderschap, Carnegie)..."
+									aria-label="Zoek in zelfkennis"
+								/>
+							</div>
+							<div class="source-filter-box">
+								<label for="myself-book-filter-select" class="filter-label">Bron:</label>
+								<select id="myself-book-filter-select" class="source-select" aria-label="Filter op bron in zelfkennis"></select>
+							</div>
+						</div>
+
+						<div id="myself-layer-filter-group" class="filter-group">
+							<!-- Dynamisch gevuld via app.js -->
+						</div>
+
+						<div class="controls-footer">
+							<span id="myself-stats" class="stats-text">5 psychologische lagen</span>
+							<div class="view-actions">
+								<button id="myself-expand-all-btn" class="action-btn">Vouw alles uit</button>
+								<button id="myself-collapse-all-btn" class="action-btn">Vouw alles in</button>
+							</div>
+						</div>
 					</div>
 				</header>
+
+				<section class="timeline-section">
+					<div id="myself-list" class="timeline"></div>
+				</section>
 			</div>
 		</main>
 
 		<script src="js/timeline-data.js"></script>
+		<script src="js/myself-data.js"></script>
 		<script src="js/app.js"></script>
 	</body>
 </html>
