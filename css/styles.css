@@ -1,0 +1,117 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	min-height: 100dvh;
+	font-family:
+		system-ui,
+		-apple-system,
+		Courier New,
+		sans-serif;
+	line-height: 1.5;
+	overflow-wrap: break-word;
+}
+
+nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding: 1.25rem 1rem;
+	background-color: #000000;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.nav-links {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 1.25rem;
+	list-style: none;
+}
+
+.nav-links a {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 140px;
+	padding: 0.65rem 1rem;
+	background-color: #ffffff;
+	color: #000000;
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 0.95rem;
+	border-radius: 8px;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25), 0 2px 4px rgba(255, 255, 255, 0.1);
+	transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.nav-links a::before {
+	content: "✓";
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 20px;
+	height: 20px;
+	margin-right: 0.5rem;
+	border-radius: 50%;
+	background-color: #000000;
+	color: #ffffff;
+	font-size: 0.75rem;
+	font-weight: 700;
+	line-height: 1;
+	flex-shrink: 0;
+}
+
+.nav-links a:hover {
+	transform: translateY(-2px);
+	background-color: #f3f4f6;
+	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35), 0 3px 6px rgba(255, 255, 255, 0.15);
+}
+
+.nav-links a:active {
+	transform: translateY(0);
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Standaard (mobiel: 1 kolom) */
+.content-wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	padding: 1rem;
+	width: 100%;
+}
+
+/* Tablet en groter */
+@media (min-width: 768px) {
+	.content-wrapper {
+		flex-direction: row;
+		gap: 2rem;
+		padding: 2rem;
+	}
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+	.content-wrapper {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+}
+
+/* Responsieve media */
+img,
+video,
+iframe {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
