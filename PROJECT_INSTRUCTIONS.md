@@ -87,23 +87,23 @@ Hierdoor verschijnt het boek automatisch in het dropdown-filter van de applicati
 
 ## 5. De Structuur van Zelfkennis ("To get to know myself")
 
-Voor de innerlijke wereld gebruiken we geen historische jaartallen, maar een **5-lagenmodel van de menselijke psyche** (van binnen/biologie naar buiten/zingeving) in [js/myself-data.js](file:///c:/Users/spuya/Desktop/Apps/bookshelf/js/myself-data.js):
+Voor de innerlijke wereld gebruiken we geen historische jaartallen, maar een **5-lagenmodel van de menselijke psyche** (van binnen/biologie naar buiten/zingeving) in [js/myself-data.js](file:///c:/Users/spuya/Desktop/Apps/bookshelf/js/myself-data.js). Alle 5 lagen zijn momenteel actief en gevuld met daadwerkelijk gelezen boeken:
 
 1. **Laag 1: Het Biologische Oerbrein (Biologie & Evolutie)** *(Actief)*
    - *Thema's:* Vecht-of-vlucht, neurotransmitters, evolutiepsychologie, savannebrein.
    - *Verwerkte bron:* Yuval Noah Harari (*Sapiens* Hfd 3).
-2. **Laag 2: Het Cognitieve Brein (Denken & Mentale Modellen)** *(Gereserveerd)*
-   - *Thema's:* Systeem 1 & Systeem 2, heuristieken, confirmation bias, verliesaversie, blinde vlekken.
-   - *Status:* Gereserveerd voor toekomstige boeken (bijv. Kahneman, Dobelli).
+2. **Laag 2: Het Cognitieve Brein (Denken & Mentale Modellen)** *(Actief)*
+   - *Thema's:* Paradigma's & karakterethiek, de volwassenheidscontinuüm (afhankelijkheid → onafhankelijkheid → wederzijdse afhankelijkheid), P/PM-balans, Eigenschap 1: Wees proactief & de Cirkel van Invloed (Viktor Frankl).
+   - *Verwerkte bron:* Stephen R. Covey (*De 7 eigenschappen van effectief leiderschap* – Deel 1 Hst 1 & 2, Deel 2 Hst 3).
 3. **Laag 3: Het Emotionele Zelf & Sociale Verbinding (Gemoed, Empathie & Erkenning)** *(Actief)*
-   - *Thema's:* Oprechte waardering, honger naar erkenning, belangstelling, luisterkunst, sympathie.
-   - *Verwerkte bron:* Dale Carnegie (*Hoe je vrienden maakt en mensen beïnvloedt* – Deel 1 & 2, Hst 1 t/m 9).
+   - *Thema's:* Oprechte waardering, de honger naar erkenning, actieve belangstelling, luisterkunst, en Eigenschap 5: Empathisch luisteren & psychologische zuurstof (Ethos, Pathos, Logos).
+   - *Verwerkte bronnen:* Dale Carnegie (*Hoe je vrienden maakt en mensen beïnvloedt* – Hst 1 t/m 9) & Stephen R. Covey (*De 7 eigenschappen...* – Deel 3 Hst 8).
 4. **Laag 4: Het Handelende Zelf & Sociale Invloed (Overtuigen & Leiderschap)** *(Actief)*
-   - *Thema's:* Conflicthantering, diplomatie zonder weerstand, intrinsieke motivatie, empathisch leiderschap en reputatiebevestiging.
-   - *Verwerkte bron:* Dale Carnegie (*Hoe je vrienden maakt en mensen beïnvloedt* – Deel 3 & 4, Hst 10 t/m 30).
-5. **Laag 5: Het Filosofische Zelf (Zingeving & Levenskunst)** *(Gereserveerd)*
-   - *Thema's:* Stoïcisme, de tweedeling van controle, memento mori, amor fati, existentiële betekenis.
-   - *Status:* Gereserveerd voor toekomstige boeken (bijv. Seneca, Aurelius, Frankl).
+   - *Thema's:* Eigenschap 3: Belangrijke zaken eerst (Kwadrant II timemanagement), de Emotionele Bankrekening (6 stortingen), Eigenschap 4: Denk Win-Win (overvloedmentaliteit), Eigenschap 6: Synergie (de derde weg) en diplomatieke beïnvloeding zonder wrok.
+   - *Verwerkte bronnen:* Dale Carnegie (*Hoe je vrienden maakt...* – Hst 10 t/m 30) & Stephen R. Covey (*De 7 eigenschappen...* – Deel 2 Hst 5, Deel 3 Hst 6, 7 & 9).
+5. **Laag 5: Het Filosofische Zelf (Zingeving & Levenskunst)** *(Actief)*
+   - *Thema's:* Eigenschap 2: Begin met het einde voor ogen (de begrafenisoefening & persoonlijk statuut), principegericht leven, Eigenschap 7: Houd de zaag scherp (zelfvernieuwing op 4 dimensies) en De Transitiepersoon (generaties lange patronen doorbreken).
+   - *Verwerkte bron:* Stephen R. Covey (*De 7 eigenschappen van effectief leiderschap* – Deel 2 Hst 4, Deel 4 Hst 10 & 11).
 
 ### Nieuwe psychologie/filosofie-kennis toevoegen:
 Voeg uitsluitend boeken toe die de gebruiker daadwerkelijk heeft aangeleverd. Koppel een nieuw boek of hoofdstuk aan het meest passende thema of laag in `myselfData` in [js/myself-data.js](file:///c:/Users/spuya/Desktop/Apps/bookshelf/js/myself-data.js) met exact hetzelfde bron-schema (`kernboodschap`, `inhoud`, `voorbeeld`, `takeaways`) en registreer het boek in `registeredMyselfBooks`.

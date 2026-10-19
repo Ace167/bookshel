@@ -4,9 +4,11 @@
 // Bevat uitsluitend boeken die door de gebruiker zijn aangeleverd:
 // - Sapiens (Yuval Noah Harari)
 // - Hoe je vrienden maakt en mensen beïnvloedt (Dale Carnegie)
+// - De 7 eigenschappen van effectief leiderschap (Stephen R. Covey)
 
 const registeredMyselfBooks = [
-  { id: "all", title: "Alle bronnen (2 boeken)" },
+  { id: "all", title: "Alle bronnen (3 boeken)" },
+  { id: "de-zeven-eigenschappen", title: "De 7 eigenschappen van effectief leiderschap (Stephen Covey)" },
   { id: "hoe-je-vrienden-maakt", title: "Hoe je vrienden maakt en mensen beïnvloedt (Dale Carnegie)" },
   { id: "sapiens", title: "Sapiens: Evolutiepsychologie (Yuval Noah Harari)" }
 ];
@@ -51,6 +53,93 @@ const myselfData = [
           "Veel stress en onzekerheid zijn geen persoonlijke fouten, maar gezonde reacties van een oeroud overlevingsbrein in een onnatuurlijke moderne omgeving.",
           "Sociale acceptatie voelt biologisch als levensnoodzaak omdat afzondering op de savanne fataal was.",
           "Zelfkennis begint met compassie voor je biologische 'hardware'."
+        ]
+      }
+    ]
+  },
+
+  // =========================================================================
+  // LAAG 2: HET COGNITIEVE BREIN (DENKEN & MENTALE MODELLEN)
+  // =========================================================================
+  {
+    id: "layer-2-milestone-1",
+    layerNumber: 2,
+    layerId: "cognitie",
+    layerName: "Laag 2: Het Cognitieve Brein",
+    icon: "🧠",
+    title: "Paradigma's, Karakterethiek & Mentale Modellen",
+    coreQuestion: "Hoe bepalen onze onbewuste aannames (onze mentale bril) hoe we de werkelijkheid interpreteren?",
+    tagline: "Van binnen naar buiten werken, de breuk tussen karakter- en persoonlijkheidsethiek, paradigmaverschuivingen en de P/PM-balans.",
+    sources: [
+      {
+        bookId: "de-zeven-eigenschappen",
+        bookTitle: "De 7 eigenschappen van effectief leiderschap",
+        author: "Stephen R. Covey",
+        chapterNumber: 1,
+        chapterTitle: "Deel 1 – Hst. 1: Van binnen naar buiten",
+        kernboodschap: "Blijvende verandering en échte effectiviteit beginnen niet met slimme trucjes of communicatietechnieken, maar bij wie je diep vanbinnen bent en de bril (het paradigma) waarmee je naar de wereld kijkt. Als je je leven of leiderschap fundamenteel wilt veranderen, moet je dus van binnen naar buiten werken.",
+        inhoud: [
+          "Covey opent zijn boek met het resultaat van een grootschalig literatuuronderzoek naar tweehonderd jaar aan Amerikaanse succesliteratuur. Hij ontdekte een opvallende breuklijn rond de Eerste Wereldoorlog. In de eerste 150 jaar draaide succesliteratuur om de karakterethiek: het idee dat een goed en succesvol leven voortkomt uit fundamentele deugden zoals integriteit, nederigheid, trouw, matigheid en moed. Na de Eerste Wereldoorlog verschoof de aandacht echter naar de persoonlijkheidsethiek: succes werd ineens een kwestie van publiek imago, vlotte gesprekstechnieken, positief denken en snelle gedragsfoefjes ('quick fixes').",
+          "Volgens Covey zijn die uiterlijke technieken op zichzelf niet verkeerd, maar zijn ze waardeloos – en zelfs manipulatief – als er geen sterk karakter onder ligt. Je kunt geen duurzame vertrouwensrelatie opbouwen met aangeleerde charme als je intenties niet oprecht zijn. Uiteindelijk prikt iedereen door die façade heen.",
+          "Om dat te begrijpen introduceert Covey het begrip paradigma: de mentale landkaart of bril waarmee je de werkelijkheid waarneemt en interpreteert. Wij denken vaak dat we de wereld zien zoals die is, maar in werkelijkheid zien we de wereld zoals wij zijn. Als je kleine veranderingen wilt in je leven, kun je sleutelen aan je gedrag en houding. Maar als je een kwantumsprong vooruit wilt maken, heb je een paradigmaverschuiving nodig: een fundamenteel andere kijk op jezelf en de wereld. Die verschuiving moet verankerd zijn in tijdloze, universele principes (zoals eerlijkheid, menselijke waardigheid en groei) die net zo onwrikbaar werken als de wet van de zwaartekracht. 'Van binnen naar buiten' betekent dat persoonlijke overwinningen altijd voorafgaan aan overwinningen met je omgeving."
+        ],
+        voorbeeld: "Op een rustige zondagochtend zit Covey in de metro in New York. Mensen lezen de krant of dommelen wat weg. Bij een halte stapt een man in met zijn kinderen. De kinderen zijn ontzettend druk: ze schreeuwen, gooien met spullen en grissen zelfs kranten uit de handen van passagiers. De vader zit ernaast, sluit zijn ogen en doet helemaal niets. Covey raakt behoorlijk geïrriteerd en spreekt de man er beheerst op aan. De man kijkt op alsof hij net ontwaakt en zegt zachtjes: 'O, u hebt gelijk, ik moet er eigenlijk iets aan doen... We komen net uit het ziekenhuis, waar hun moeder een uur geleden is overleden. Ik weet me geen raad en de kinderen volgens mij ook niet.' In één seconde kantelt Coveys paradigma volledig: zijn ergernis verdwijnt op slag en maakt plaats voor diep medeleven en de wens om te helpen.",
+        takeaways: [
+          "Karakter boven techniek: Snelle trucjes uit de persoonlijkheidsethiek werken alleen op de korte termijn; duurzame effectiviteit rust op de karakterethiek (wie je écht bent).",
+          "Ken je eigen bril: Hoe je een probleem ziet, is vaak het probleem. Onderzoek eerst je eigen aannames en mentale kaart voordat je naar anderen wijst.",
+          "Principes zijn geen waarden: Een bende criminelen kan gezamenlijke waarden hebben, maar overleeft op lange termijn niet omdat ze universele principes schenden.",
+          "Van binnen naar buiten: Je kunt pas sterke relaties met anderen opbouwen als je eerst aan je eigen karakter en betrouwbaarheid hebt gewerkt."
+        ]
+      },
+      {
+        bookId: "de-zeven-eigenschappen",
+        bookTitle: "De 7 eigenschappen van effectief leiderschap",
+        author: "Stephen R. Covey",
+        chapterNumber: 2,
+        chapterTitle: "Deel 1 – Hst. 2: De zeven eigenschappen – Een overzicht",
+        kernboodschap: "Onze identiteit en ons succes worden gevormd door onze gewoonten: het snijvlak van kennis, vaardigheid en verlangen. De zeven eigenschappen vormen geen losstaande tips, maar een logische groeireis van afhankelijkheid, via onafhankelijkheid, naar wederzijdse afhankelijkheid.",
+        inhoud: [
+          "Aristoteles zei het al: we zijn wat we herhaaldelijk doen. Covey definieert een eigenschap (of gewoonte) als de overlap tussen drie elementen: kennis (het wat en het waarom), vaardigheid (het hoe) en verlangen (de motivatie of het willen). Pas als je alle drie beheerst, ontstaat een blijvende eigenschap.",
+          "Covey plaatst de zeven eigenschappen vervolgens op het volwassenheidscontinuüm (Maturity Continuum): Afhankelijkheid (het paradigma van 'Jij': anderen de schuld geven), Onafhankelijkheid (het paradigma van 'Ik': zelfredzaamheid en eigen keuzes via Eigenschap 1, 2 en 3), en Wederzijdse afhankelijkheid (het paradigma van 'Wij': samenwerken op basis van karakter via Eigenschap 4, 5 en 6). Eigenschap 7 zorgt voor voortdurende vernieuwing van het geheel.",
+          "Tot slot legt Covey vast wat hij bedoelt met effectiviteit via de P/PM-balans: de verhouding tussen Productie (P: het gewenste resultaat, de gouden eieren) en het Productiemiddel (PM: het vermogen of het kapitaal dat de resultaten voortbrengt, de gans). Wie alleen focust op resultaat en het onderhoud van mensen, relaties of zijn eigen lichaam verwaarloost, pleegt roofbouw."
+        ],
+        voorbeeld: "De fabel van Aisopos over de boer en de gans met de gouden eieren. De arme boer wordt slapend rijk dankzij de gouden eieren, maar door hebzucht en ongeduld slacht hij de gans om alle eieren in één klap te grijpen. De buik blijkt leeg en de bron van rijkdom is voorgoed vernietigd. Covey laat zien dat we dit dagelijks doen wanneer we roofbouw plegen op ons lichaam, relaties beschadigen om snel gelijk te halen of bezuinigen op personeelsonderhoud om kwartaalcijfers op te krikken.",
+        takeaways: [
+          "Drie ingrediënten voor gedragsverandering: Een nieuwe eigenschap aanleren vereist kennis (wat), vaardigheid (hoe) én motivatie (waarom).",
+          "Het volwassenheidscontinuüm: Je kunt niet echt samenwerken (wederzijds afhankelijk zijn) als je eerst niet op eigen benen hebt leren staan (onafhankelijk bent).",
+          "Bewaar de P/PM-balans: Echte effectiviteit houdt altijd resultaat (Productie) én de bron van dat resultaat (Productiemiddel) in evenwicht."
+        ]
+      }
+    ]
+  },
+  {
+    id: "layer-2-milestone-2",
+    layerNumber: 2,
+    layerId: "cognitie",
+    layerName: "Laag 2: Het Cognitieve Brein",
+    icon: "🧭",
+    title: "Proactiviteit, Keuzevrijheid & De Cirkel van Invloed",
+    coreQuestion: "Hoe behoud je regie over je leven wanneer omstandigheden, tegenslagen en reactieve impulsen je dreigen te overweldigen?",
+    tagline: "De ruimte tussen prikkel en respons, de vier menselijke gaven en het vergroten van je Cirkel van Invloed.",
+    sources: [
+      {
+        bookId: "de-zeven-eigenschappen",
+        bookTitle: "De 7 eigenschappen van effectief leiderschap",
+        author: "Stephen R. Covey",
+        chapterNumber: 3,
+        chapterTitle: "Deel 2 – Hst. 3 (Eigenschap 1): Wees proactief – Principes van persoonlijk inzicht",
+        kernboodschap: "Proactief zijn betekent veel meer dan alleen het initiatief nemen: het is het fundamentele besef dat jij als mens verantwoordelijk bent voor je eigen leven en dat jouw gedrag een functie is van je eigen keuzes, niet van je omstandigheden.",
+        inhoud: [
+          "Mensen laten zich vaak leiden door het idee dat ze volledig geprogrammeerd zijn door hun genen, opvoeding of werkomgeving. Als het regent of een collega chagrijnig is, voelen reactieve mensen zich meteen ellendig. Covey laat zien dat er tussen datgene wat ons overkomt (de prikkel) en hoe wij daarop reageren (de respons) een beslissende ruimte zit: onze keuzevrijheid (freedom to choose). Mensen bezitten vier unieke gaven die dieren niet hebben: zelfbewustzijn, voorstellingsvermogen, geweten en vrije wil.",
+          "Het verschil tussen reactieve en proactieve mensen klinkt direct door in hun taalgebruik. Reactieve mensen gebruiken taal die hen vrijpleit ('Ik kan er niets aan doen', 'Zo ben ik nu eenmaal', 'Hij maakt me kwaad'). Proactieve mensen zeggen: 'Ik kijk welke alternatieven er zijn', 'Ik kies voor een andere aanpak'. Verantwoordelijkheid is letterlijk response-ability: het vermogen om je eigen reactie te kiezen.",
+          "Covey verdeelt onze leefwereld in twee cirkels: de Cirkel van Betrokkenheid (alles waar we ons druk om maken maar geen directe controle over hebben) en de Cirkel van Invloed (alles waar we wél direct invloed op kunnen uitoefenen). Reactieve mensen focussen op de Cirkel van Betrokkenheid en voelen zich slachtoffer, waardoor hun invloed krimpt. Proactieve mensen werken uitsluitend binnen hun Cirkel van Invloed, waardoor hun invloed gestaag groeit."
+        ],
+        voorbeeld: "Psychiater Viktor Frankl in de nazi-concentratiekampen. Terwijl zijn familie werd vermoord en hij dagelijks werd gemarteld, ontdekte hij in een kale cel 'de laatste van de menselijke vrijheden': zijn bewakers konden zijn lichaam en omgeving beheersen, maar ze konden hem nooit de vrijheid ontnemen om zelf te kiezen hoe hij innerlijk op die omstandigheden reageerde. Door zijn geest te richten op hoop, betekenis en de toekomst, werd hij een bron van moed voor medegevangenen.",
+        takeaways: [
+          "Tussen prikkel en respons zit keuzevrijheid: Wat ons overkomt doet ons niet zoveel pijn als de manier waarop we zelf verkiezen op die gebeurtenis te reageren.",
+          "Let op je taalgebruik: Vervang passieve 'ik moet'- en 'als ik maar'-zinnen door actieve 'ik kies'- en 'ik ga'-formuleringen.",
+          "Werk binnen je Cirkel van Invloed: Steek geen energie in ergernissen waar je niets aan kunt veranderen; verbeter je eigen bijdrage en zie hoe je invloed vanzelf groter wordt.",
+          "Fouten maken mag: De proactieve aanpak van een fout is niet wegduiken of goedpraten, maar hem direct erkennen, ervan leren en doorgaan."
         ]
       }
     ]
@@ -245,12 +334,109 @@ const myselfData = [
       }
     ]
   },
+  {
+    id: "layer-3-milestone-3",
+    layerNumber: 3,
+    layerId: "emotie",
+    layerName: "Laag 3: Het Emotionele Zelf & Sociale Verbinding",
+    icon: "👂",
+    title: "Empathische Communicatie & Psychologische Zuurstof",
+    coreQuestion: "Waarom mislukt advies geven vrijwel altijd als je niet eerst de situatie door de ogen van de ander hebt gezien?",
+    tagline: "Eerst begrijpen... dan begrepen worden, de vier autobiografische valkuilen vermijden en de volgorde Ethos → Pathos → Logos.",
+    sources: [
+      {
+        bookId: "de-zeven-eigenschappen",
+        bookTitle: "De 7 eigenschappen van effectief leiderschap",
+        author: "Stephen R. Covey",
+        chapterNumber: 8,
+        chapterTitle: "Deel 3 – Hst. 8 (Eigenschap 5): Eerst begrijpen... dan begrepen worden – Principes van empathische communicatie",
+        kernboodschap: "De meeste mensen luisteren niet met de intentie om de ander te begrijpen, maar met de intentie om te antwoorden. Pas wanneer je eerst een grondige diagnose stelt door écht empathisch te luisteren, verwerf je het recht en de invloed om zelf begrepen te worden.",
+        inhoud: [
+          "Covey noemt deze vijfde eigenschap de allerbelangrijkste sleutel voor interpersoonlijke communicatie. We besteden jaren op school om te leren lezen, schrijven en spreken, maar vrijwel niemand krijgt ooit les in luisteren. Terwijl iemand anders praat, zijn wij in ons hoofd meestal al druk bezig met ons eigen weerwoord en filteren we alles door onze eigen levensgeschiedenis (onze autobiografie).",
+          "Covey onderscheidt vijf niveaus van luisteren: negeren, doen alsof je luistert, selectief luisteren, aandachtig luisteren en het hoogste niveau: empathisch luisteren. Empathisch luisteren betekent in het referentiekader van de ander stappen zodat je begrijpt hoe de ander de wereld ziet en voelt. Hiermee geef je de ander 'psychologische zuurstof': zodra iemand zich écht begrepen voelt, zakt de verdediging en ontstaat er ruimte voor een constructief gesprek.",
+          "In plaats van empathisch te luisteren, schieten we vrijwel altijd in één van de vier autobiografische reacties: Evalueren (meteen oordelen), Graven (sturende vragen stellen vanuit je eigen kader), Adviseren (direct met ongevraagde oplossingen komen) of Interpreteren (uitleggen waarom de ander zich zo gedraagt). Goed empathisch luisteren combineert het samenvatten van de inhoud met het benoemen van het gevoel van de ander.",
+          "Het tweede deel – '...dan begrepen worden' – vraagt om moed en volgt de klassieke Griekse filosofie van Ethos (je persoonlijke geloofwaardigheid), Pathos (je empathische aansluiting bij het gevoel van de ander, eerst begrijpen) en pas daarna Logos (de feitelijke logica van je eigen voorstel, begrepen worden)."
+        ],
+        voorbeeld: "Stel dat je naar een opticien gaat met oogklachten. De opticien zet zijn eigen bril af, geeft die aan jou en zegt: 'Zet deze maar op! Hij bevalt mij al tien jaar geweldig!' Je zet hem op en ziet alles tien keer waziger. Als je klaagt, roept de opticien verontwaardigd: 'Wat is er mis met u? Bij mij werkt hij prima, probeer het wat harder!' Niemand vertrouwt zo'n opticien omdat hij een recept voorschrijft vóórdat hij een diagnose heeft gesteld. Toch doen we dit dagelijks in onze communicatie door onze eigen autobiografische bril op andermans neus te duwen.",
+        takeaways: [
+          "Stel eerst een diagnose voordat je een recept uitschrijft: Geef nooit advies voordat je de situatie volledig door de ogen van de ander hebt bekeken.",
+          "Geef psychologische zuurstof: Mensen staan pas open voor jouw argumenten wanneer ze voelen dat hun eigen standpunt en emotie echt zijn gehoord.",
+          "Vermijd de vier autobiografische valkuilen: Laat evalueren, graven, ongevraagd adviseren en interpreteren achterwege zolang de ander zijn hart lucht.",
+          "Volg de route Ethos → Pathos → Logos: Bouw eerst aan vertrouwen en begrip voordat je met rationele presentaties en argumenten komt."
+        ]
+      }
+    ]
+  },
 
   // =========================================================================
-  // LAAG 4: HET HANDELENDE ZELF & SOCIALE INVLOED (OVERTUIGEN & LEIDERSCHAP)
+  // LAAG 4: HET HANDELENDE ZELF & SOCIALE INVLOED (ACTIE, PRIORITERING & LEIDERSCHAP)
   // =========================================================================
   {
     id: "layer-4-milestone-1",
+    layerNumber: 4,
+    layerId: "gedrag",
+    layerName: "Laag 4: Het Handelende Zelf & Sociale Invloed",
+    icon: "⏱️",
+    title: "Persoonlijk Management, Kwadrant II & Rentmeesterschap",
+    coreQuestion: "Hoe voorkom je dat de waan van de dag je leven regeert en zorg je dat de belangrijkste zaken écht eerst komen?",
+    tagline: "De Tijdsmanagementmatrix, nee zeggen tegen schijndruk, weekplanning op basis van levensrollen en rentmeester-delegatie.",
+    sources: [
+      {
+        bookId: "de-zeven-eigenschappen",
+        bookTitle: "De 7 eigenschappen van effectief leiderschap",
+        author: "Stephen R. Covey",
+        chapterNumber: 5,
+        chapterTitle: "Deel 2 – Hst. 5 (Eigenschap 3): Belangrijke zaken eerst – Principes van persoonlijk management",
+        kernboodschap: "Waar eigenschap 2 het mentale ontwerp is (leiderschap), is eigenschap 3 de daadwerkelijke uitvoering in het dagelijks leven (management). Effectief zelfmanagement draait niet om meer taken in minder tijd proppen, maar om het geven van voorrang aan zaken die écht belangrijk zijn boven zaken die alleen maar urgent lijken.",
+        inhoud: [
+          "De vierde generatie timemanagement realiseert zich dat je tijd helemaal niet kunt managen; je kunt alleen jezelf managen in relatie tot wat je echt belangrijk vindt. Covey introduceert zijn beroemde Tijdsmanagementmatrix op twee assen: Urgent (eist nú actie) en Belangrijk (draagt bij aan langetermijndoelen):",
+          "Kwadrant I (Urgent & Belangrijk: crises en harde deadlines), Kwadrant II (Niet urgent, wél Belangrijk: preventie, relaties bouwen, langetermijnplanning, beweging en groei – het hart van effectiviteit), Kwadrant III (Urgent, maar Niet belangrijk: schijnhaast gestuurd door agenda's van anderen), en Kwadrant IV (Niet urgent én Niet belangrijk: tijdverspilling en vluchtgedrag).",
+          "Tijd win je voor Kwadrant II door tijd weg te halen uit Kwadrant III en IV. Dat vraagt om de wilskracht om vriendelijk doch beslist 'Nee' te zeggen tegen bijzaken omdat er een groter, brandend 'Ja' in je leeft voor je eigen prioriteiten. Plan per week op basis van je levensrollen en plan 'de grote keien' als allereerste in je agenda."
+        ],
+        voorbeeld: "Rentmeester-delegatie (focussen op resultaat in plaats van methode) toegepast op Coveys zevenjarige zoon Stephen, die de zorg voor het gazon op zich neemt. In plaats van een klusjeslijst spreken ze het gewenste eindresultaat af ('groen en schoon') met vijf kaders: resultaat, richtlijnen, middelen, verantwoording en consequenties. Als Stephen na een paar dagen vastloopt, helpt Covey hem op gang door vuilniszakken vast te houden, waarna het kind de hele zomer zelfstandig en trots de tuin onderhoudt.",
+        takeaways: [
+          "Focus op Kwadrant II: Investeer het gros van je energie in zaken die belangrijk zijn maar niet urgent (preventie, strategie, relaties en groei); zo krimpt het aantal crises in Kwadrant I vanzelf.",
+          "Leer 'Nee' zeggen: Je kunt alleen 'Nee' zeggen tegen de urgente waan van de dag als er een dieper 'Ja' voor je eigen prioriteiten in je brandt.",
+          "Plan per week op basis van rollen: Vertaal je missie wekelijks naar concrete doelen per rol en blokkeer daar als eerste tijd voor in je agenda.",
+          "Delegeer op resultaat, niet op methode: Pas rentmeester-delegatie toe met vijf heldere afspraken (resultaat, richtlijnen, middelen, verantwoording en consequenties)."
+        ]
+      }
+    ]
+  },
+  {
+    id: "layer-4-milestone-2",
+    layerNumber: 4,
+    layerId: "gedrag",
+    layerName: "Laag 4: Het Handelende Zelf & Sociale Invloed",
+    icon: "🏦",
+    title: "Wederzijdse Afhankelijkheid & De Emotionele Bankrekening",
+    coreQuestion: "Wat is de onzichtbare valuta die bepaalt of samenwerking moeiteloos verloopt of verandert in een mijnenveld?",
+    tagline: "Vertrouwen opbouwen via zes cruciale stortingen, loyaliteit aan afwezigen en oprechte excuses bij opnamen.",
+    sources: [
+      {
+        bookId: "de-zeven-eigenschappen",
+        bookTitle: "De 7 eigenschappen van effectief leiderschap",
+        author: "Stephen R. Covey",
+        chapterNumber: 6,
+        chapterTitle: "Deel 3 – Hst. 6: Paradigma's van wederzijdse afhankelijkheid",
+        kernboodschap: "Je kunt niet succesvol met anderen samenwerken als je jezelf nog niet hebt overwonnen; een publieke overwinning volgt altijd op een persoonlijke overwinning. De valuta van elke gezonde relatie is het vertrouwen dat je opbouwt via de Emotionele Bankrekening.",
+        inhoud: [
+          "Veel mensen proberen conflicten op te lossen met communicatietrucjes terwijl de betrokkenen innerlijk nog reactief zijn. Echte wederzijdse afhankelijkheid kan alleen worden opgebouwd door emotioneel onafhankelijke mensen.",
+          "Covey introduceert de metafoor van de Emotionele Bankrekening: het saldo van veiligheid en vertrouwen in een relatie. Door vriendelijkheid, integriteit en beloftes nakomen doe je stortingen. Door botheid, roddelen of afspraken schenden doe je opnamen. Bij een hoog saldo is er vertrouwen en vergeving; bij een rood saldo verandert elk gesprek in een mijnenveld.",
+          "Covey onderscheidt zes krachtige stortingen: 1) Het individu echt begrijpen (storten in de valuta van de ander), 2) Aandacht voor de kleine dingen, 3) Beloftes strikt nakomen, 4) Verwachtingen vooraf verduidelijken, 5) Persoonlijke integriteit tonen (vooral loyaal zijn aan wie afwezig is), en 6) Oprecht excuses aanbieden bij een opname."
+        ],
+        voorbeeld: "Een vader die ontdekt dat de band met zijn opstandige tienerzoon diep 'rood' staat door jarenlange constante kritiek en voorwaardelijke liefde. Door oprecht sorry te zeggen, te stoppen met preken en maandenlang consequente stortingen te doen die voor zijn zoon waardevol zijn (samen laat op de avond een broodje halen, interesse tonen in zijn hobby's zonder verborgen agenda), herstelt het wederzijdse vertrouwen zich volledig.",
+        takeaways: [
+          "Houd je Emotionele Bankrekening positief: Hoog vertrouwen maakt samenwerken snel en soepel; laag vertrouwen maakt elk gesprek stroperig en defensief.",
+          "Stort in de valuta van de ander: Wat voor jou als een cadeautje voelt, kan voor een ander een belasting zijn; leer eerst kennen wat de ander écht waardeert.",
+          "Wees loyaal aan de afwezigen: Hoe je praat over mensen die er niet bij zijn, bepaalt het vertrouwen van de mensen die er wél bij zijn.",
+          "Zie problemen als kansen: In een wederzijds afhankelijke relatie is elk probleem een kans om de onderlinge Emotionele Bankrekening verder op te bouwen."
+        ]
+      }
+    ]
+  },
+  {
+    id: "layer-4-milestone-3",
     layerNumber: 4,
     layerId: "gedrag",
     layerName: "Laag 4: Het Handelende Zelf & Sociale Invloed",
@@ -370,7 +556,7 @@ const myselfData = [
     ]
   },
   {
-    id: "layer-4-milestone-2",
+    id: "layer-4-milestone-4",
     layerNumber: 4,
     layerId: "gedrag",
     layerName: "Laag 4: Het Handelende Zelf & Sociale Invloed",
@@ -490,7 +676,59 @@ const myselfData = [
     ]
   },
   {
-    id: "layer-4-milestone-3",
+    id: "layer-4-milestone-5",
+    layerNumber: 4,
+    layerId: "gedrag",
+    layerName: "Laag 4: Het Handelende Zelf & Sociale Invloed",
+    icon: "🤝",
+    title: "Win-Win Denken & Het Derde Alternatief (Synergie)",
+    coreQuestion: "Hoe overstijg je concurrentie en slappe compromissen om samen oplossingen te creëren die groter zijn dan de som der delen?",
+    tagline: "De Overvloedmentaliteit, Win-Win of Geen Deal, creatieve synergie (1 + 1 = 3) en het wegnemen van remmende krachten.",
+    sources: [
+      {
+        bookId: "de-zeven-eigenschappen",
+        bookTitle: "De 7 eigenschappen van effectief leiderschap",
+        author: "Stephen R. Covey",
+        chapterNumber: 7,
+        chapterTitle: "Deel 3 – Hst. 7 (Eigenschap 4): Denk win-win – Principes van interpersoonlijk leiderschap",
+        kernboodschap: "Win-Win is geen onderhandelingstruc, maar een levenshouding van geest en hart waarbij je in elke menselijke interactie oprecht zoekt naar wederzijds voordeel. Het berust op de overtuiging dat het succes van de één niet ten koste hoeft te gaan van het succes van de ander.",
+        inhoud: [
+          "Covey onderscheidt zes denkkaders van menselijke interactie: Win-Win, Win-Verlies (autoritair), Verlies-Win (de 'pleaser'), Verlies-Verlies (wraakzuchtig), Win (egoïstisch) en Win-Win of Geen Deal (Win-Win or No Deal: als we geen wederzijds voordeel vinden, gaan we zonder wrok niet in zee, wat halfslachtige compromissen voorkomt).",
+          "Win-Win vereist drie karaktereigenschappen: Integriteit (je eigen waarden trouw blijven), Volwassenheid (de balans tussen moed om voor jezelf op te komen en inlevingsvermogen in de ander), en de Overvloedmentaliteit (Abundance Mentality: het diepe geloof dat er genoeg succes, erkenning en winst is voor iedereen, tegenover de beklemmende Schaarstementaliteit).",
+          "Tot slot waarschuwt Covey dat Win-Win in organisaties alleen werkt als de systemen (zoals beloningen en evaluaties) ook op Win-Win zijn ingericht; je krijgt immers altijd het gedrag waar je op beloont, niet waar je om vraagt."
+        ],
+        voorbeeld: "Een directeur vraagt Covey om een training in teamwork omdat zijn verkopers weigeren samen te werken. Achter het bureau van de directeur hangt echter een poster met racepaarden: 'Werk samen! En win de hoofdprijs: één gratis droomreis naar Bermuda voor de beste verkoper!' Het bedrijf beloonde keihard op Win-Verlies (er kon immers maar één winnen). Pas toen de doelen zo werden omgebouwd dat iedereen die de norm haalde de reis verdiende, explodeerden de samenwerking en de omzet. Bij Verlies-Verlies noemt Covey de vechtscheiding waarbij een man zijn auto van $10.000 uit pure rancune voor $50 verkoopt om zijn ex-vrouw slechts $25 te hoeven geven.",
+        takeaways: [
+          "Zoek naar Win-Win of Geen Deal: Sluit geen lauwe compromissen waarbij iedereen een beetje verliest; zoek naar echt wederzijds voordeel of besluit eerlijk om niet samen verder te gaan.",
+          "Combineer moed met inlevingsvermogen: Wees zowel assertief over je eigen doelen als empathisch voor de belangen van de ander.",
+          "Kweek een overvloedmentaliteit: Gun anderen hun succes; de taart kan voor iedereen groter worden.",
+          "Stem systemen af op Win-Win: Je krijgt altijd waar je op beloont, niet waar je om vraagt."
+        ]
+      },
+      {
+        bookId: "de-zeven-eigenschappen",
+        bookTitle: "De 7 eigenschappen van effectief leiderschap",
+        author: "Stephen R. Covey",
+        chapterNumber: 9,
+        chapterTitle: "Deel 3 – Hst. 9 (Eigenschap 6): Synergie – Principes van creatieve samenwerking",
+        kernboodschap: "Synergie houdt in dat het geheel groter is dan de som der delen (1 + 1 = 3 of meer). Door onderlinge verschillen tussen mensen niet als obstakels te zien maar juist te waarderen en te benutten, ontstaan nieuwe inzichten en een Derde Alternatief dat beter is dan wat ieder afzonderlijk had bedacht.",
+        inhoud: [
+          "Synergie is de bekroning van alle voorgaande eigenschappen. Als mensen met een sterk karakter (1, 2, 3) in een sfeer van Win-Win (4) empathisch naar elkaar luisteren (5), ontstaat psychologische veiligheid waarin creativiteit bloeit.",
+          "De kern van synergie is het waarderen van verschillen: als twee mensen precies dezelfde mening hebben, is één van hen overbodig. Onzekere mensen eisen uniformiteit; effectieve mensen beseffen dat andermans afwijkende blikveld hun eigen blinde vlekken opheft.",
+          "Covey toont de niveaus van communicatie: Laag (defensief, Win-Verlies), Middelmatig (respectvol compromis, 1+1=1,5: beiden leveren in), en Hoog (synergetisch, Win-Win: het Derde Alternatief, niet mijn manier of jouw manier, maar ónze betere manier). Tevens gebruikt hij Lewins krachtenveldanalyse: duw niet harder tegen stuwende krachten, maar hef remmende krachten (emoties, angsten) op via empathie."
+        ],
+        voorbeeld: "Een gezin dreigt in een bittere vakantieruzie te belanden: de man wil na een zwaar werkjaar een week vissen en kamperen in de natuur; de vrouw wil haar doodzieke moeder 400 kilometer verderop bezoeken. Zowel toegeven als een compromis levert een rotweek op. Door elkaars diepere verlangens echt te onderzoeken vinden ze een synergetisch Derde Alternatief: ze boeken een prachtig kampeerterrein vlak bij het huis van de moeder. Het gezin geniet van de natuur én kan dagelijks uitgebreid bij oma op bezoek.",
+        takeaways: [
+          "Zoek het Derde Alternatief: Neem geen genoegen met een halfslachtig compromis (1 + 1 = 1,5), maar combineer inzichten tot een geheel nieuwe oplossing (1 + 1 = 3).",
+          "Vier het verschil: Als iemand anders naar een probleem kijkt dan jij, zeg dan: 'Wat goed! Jij ziet het anders dan ik; help me te begrijpen wat jij ziet'.",
+          "Eenheid is geen uniformiteit: Echte samenwerking vraagt niet om ja-knikkers die hetzelfde denken, maar om verschillende talenten die hetzelfde doel nastreven.",
+          "Haal remmende krachten weg: Duw niet harder tegen weerstand aan, maar luister de weerstand weg zodat tegenstanders bondgenoten worden."
+        ]
+      }
+    ]
+  },
+  {
+    id: "layer-4-milestone-6",
     layerNumber: 4,
     layerId: "gedrag",
     layerName: "Laag 4: Het Handelende Zelf & Sociale Invloed",
@@ -592,7 +830,7 @@ const myselfData = [
     ]
   },
   {
-    id: "layer-4-milestone-4",
+    id: "layer-4-milestone-7",
     layerNumber: 4,
     layerId: "gedrag",
     layerName: "Laag 4: Het Handelende Zelf & Sociale Invloed",
@@ -671,6 +909,94 @@ const myselfData = [
           "Wees oprecht, beloof niets wat je niet kunt waarmaken en focus op het voordeel voor de ander.",
           "Geef mensen autoriteit, een passende titel of zichtbare waardering wanneer je hun een extra taak toevertrouwt.",
           "Speel bij een verzoek in op het gevoel dat juist de unieke kennis of ervaring van die persoon onmisbaar is om de klus te klaren."
+        ]
+      }
+    ]
+  },
+
+  // =========================================================================
+  // LAAG 5: HET FILOSOFISCHE ZELF (ZINGEVING, KARAKTER & LEVENSKUNST)
+  // =========================================================================
+  {
+    id: "layer-5-milestone-1",
+    layerNumber: 5,
+    layerId: "filosofie",
+    layerName: "Laag 5: Het Filosofische Zelf",
+    icon: "🏛️",
+    title: "Persoonlijk Leiderschap, Waarden & Het Principe-Centrum",
+    coreQuestion: "Hoe zorg je dat je levensladder tegen de juiste muur staat voordat je begint met klimmen?",
+    tagline: "De wet van de dubbele schepping (eerst mentaal, dan fysiek), het persoonlijk statuut (Mission Statement) en de begrafenisoefening.",
+    sources: [
+      {
+        bookId: "de-zeven-eigenschappen",
+        bookTitle: "De 7 eigenschappen van effectief leiderschap",
+        author: "Stephen R. Covey",
+        chapterNumber: 4,
+        chapterTitle: "Deel 2 – Hst. 4 (Eigenschap 2): Begin met het einde voor ogen – Principes van persoonlijk leiderschap",
+        kernboodschap: "Alles wordt twee keer geschapen: eerst in je hoofd (de mentale creatie) en daarna in de praktijk (de fysieke creatie). Door een glashelder beeld te vormen van wie je wilt zijn en hoe je herinnerd wilt worden, voorkom je dat je keihard de verkeerde kant op rent.",
+        inhoud: [
+          "Wanneer je een huis bouwt, begin je niet in het wilde weg metselstenen te stapelen; je maakt eerst een gedetailleerde blauwdruk. Zo werkt het ook met je leven en werk. Zonder bewust ontwerp laat je je leven vormgeven door de agenda's en druk van anderen.",
+          "Covey maakt een scherp onderscheid tussen leiderschap en management: 'Management is de dingen goed doen; leiderschap is de goede dingen doen'. Management draait om efficiënt de ladder beklimmen; leiderschap bepaalt of die ladder tegen de juiste muur staat. Talloze mensen ontdekken aan de top dat ze gezondheid en relaties onderweg zijn kwijtgeraakt.",
+          "De krachtigste toepassing is het opstellen van een persoonlijk statuut (Personal Mission Statement): een grondwet op basis van tijdloze principes (een principe-centrum). Wie zijn leven centreert op wisselvallige zaken zoals geld, status, plezier of goedkeuring van anderen, raakt stuurloos bij tegenslag; universele principes vormen een onverwoestbaar kompas."
+        ],
+        voorbeeld: "Het gedachtenexperiment van je eigen begrafenis over drie jaar. Je loopt een aula binnen en ziet jezelf in de kist liggen. Vier sprekers nemen het woord: een familielid, een goede vriend, een collega en iemand uit de gemeenschap. Covey vraagt: Wat wil je dat zij zeggen over jouw karakter, jouw daden en jouw betekenis? Vrijwel niemand hoopt dat er wordt gezegd dat hij altijd tot laat zijn mailbox bijwerkte of een duurdere auto reed. Dit experiment legt in één klap je diepste waarden bloot.",
+        takeaways: [
+          "De wet van de dubbele schepping: Bepaal eerst mentaal je bestemming en waarden voordat je in de actiemodus schiet.",
+          "Leiderschap gaat vóór management: Controleer eerst of je ladder tegen de juiste muur staat voordat je harder gaat klimmen.",
+          "Schrijf een persoonlijk statuut: Formuleer je eigen grondwet op basis van tijdloze principes en koppel deze aan de verschillende rollen in je leven (bijv. partner, ouder, ondernemer, vriend).",
+          "Kies een principe-centrum: Veranker je zekerheid en wijsheid niet in wisselvallige zaken zoals geld, status of goedkeuring van anderen, maar in onveranderlijke principes."
+        ]
+      }
+    ]
+  },
+  {
+    id: "layer-5-milestone-2",
+    layerNumber: 5,
+    layerId: "filosofie",
+    layerName: "Laag 5: Het Filosofische Zelf",
+    icon: "🪓",
+    title: "Zelfvernieuwing, De Zaag Slijpen & De Transitiepersoon",
+    coreQuestion: "Hoe bewaar je innerlijke harmonie over de vier dimensies van het bestaan en doorbreek je destructieve scripts voor volgende generaties?",
+    tagline: "De zaag scherp houden (fysiek, mentaal, spiritueel, sociaal-emotioneel), de P/PM-balans en een transitiepersoon worden die de keten van negativiteit stopt.",
+    sources: [
+      {
+        bookId: "de-zeven-eigenschappen",
+        bookTitle: "De 7 eigenschappen van effectief leiderschap",
+        author: "Stephen R. Covey",
+        chapterNumber: 10,
+        chapterTitle: "Deel 4 – Hst. 10 (Eigenschap 7): Houd de zaag scherp – Principes van evenwichtige zelfvernieuwing",
+        kernboodschap: "Jijzelf bent het allerbelangrijkste instrument dat je bezit. Eigenschap 7 omringt alle andere eigenschappen en draait om het consequent onderhouden en vernieuwen van jezelf op vier levensgebieden: fysiek, spiritueel, mentaal en sociaal-emotioneel.",
+        inhoud: [
+          "Eigenschap 7 is je persoonlijke Productiemiddel (PM) op peil houden zodat je niet opbrandt. Zonder regelmatig onderhoud worden lichaam en geest bot en verlies je de scherpte om eigenschap 1 t/m 6 toe te passen.",
+          "Covey onderscheidt vier dimensies die om evenwichtige vernieuwing vragen: 1) Fysiek (voeding, rust, beweging – typisch Kwadrant II), 2) Spiritueel (meditatie, gebed, natuur, muziek en verbinding met je waardensysteem), 3) Mentaal (blijven leren, goede boeken lezen, schrijven en plannen), en 4) Sociaal-emotioneel (empathisch luisteren, samenwerken en bijdragen aan het welzijn van anderen).",
+          "Balans tussen de vier dimensies is cruciaal. Door dagelijks een uur uit te trekken voor de Dagelijkse Overwinning op Jezelf (fysiek, mentaal en spiritueel opladen), ontstaat een opwaartse spiraal van leren, committeren en doen."
+        ],
+        voorbeeld: "Tijdens een boswandeling zie je een houthakker die al vijf uur lang uitgeput en bezweet bezig is een dikke boom om te zagen. Zijn zaagblad is knetterbot. Als je hem voorstelt om even pauze te nemen om de zaag te slijpen zodat het zagen sneller gaat, briest hij verbeten: 'Ik heb helemaal geen tijd om de zaag te slijpen! Zie je niet hoe druk ik het heb met zagen?!' Zo rennen talloze mensen door het leven zonder zichzelf op te laden.",
+        takeaways: [
+          "Gun jezelf tijd om de zaag te slijpen: Een uur per dag investeren in je eigen vernieuwing kost op de lange termijn geen tijd, maar levert juist zeeën van energie en scherpte op.",
+          "Onderhoud alle vier de dimensies in balans: Verzorg je lichaam (voeding, rust, beweging), je geest (lezen, schrijven, leren), je ziel (waarden, reflectie, natuur) en je hart (betekenisvolle relaties).",
+          "De Dagelijkse Overwinning op Jezelf: Begin je dag met fysieke, mentale en spirituele vernieuwing voordat je de publieke arena instapt.",
+          "De opwaartse spiraal: Groei verloopt niet in een cirkel op hetzelfde niveau, maar als een opwaartse spiraal van leren → voornemen → doen."
+        ]
+      },
+      {
+        bookId: "de-zeven-eigenschappen",
+        bookTitle: "De 7 eigenschappen van effectief leiderschap",
+        author: "Stephen R. Covey",
+        chapterNumber: 11,
+        chapterTitle: "Deel 4 – Hst. 11: Nogmaals van binnen naar buiten",
+        kernboodschap: "Een leven volgens de zeven eigenschappen is geen eindstation dat je ooit kunt \"afvinken\", maar een levenslange reis van binnen naar buiten. Als een transitiepersoon heb je de keuzevrijheid om negatieve patronen uit het verleden en vorige generaties definitief te doorbreken en een positieve erfenis door te geven.",
+        inhoud: [
+          "In dit afsluitende hoofdstuk brengt Covey de lijnen samen. Zelfs in de hechtste relaties vraagt echte verbinding om tijd, geduld en bewuste Kwadrant II-aandacht.",
+          "Het sleutelbegrip is de transitiepersoon (Transition Person): veel destructieve gedragspatronen (kilheid, schuldgevoel, agressie, schaarstementaliteit) worden van generatie op generatie doorgegeven als excuus ('Zo waren mijn ouders ook'). Dankzij onze menselijke gaven zijn we nooit gedwongen die scripts voort te zetten.",
+          "Een transitiepersoon absorbeert die giftige neigingen en vervangt ze bewust door begrip, empathie, integriteit en onvoorwaardelijke steun. Daarmee word je een krachtige schakel die een nieuwe familietraditie van vertrouwen bouwt voor toekomstige generaties."
+        ],
+        voorbeeld: "Covey beschrijft de vaste gewoonte met zijn vrouw Sandra om regelmatig een vier uur durende autorit te maken puur om ongestoord te praten en te luisteren. Daarnaast vertelt hij over een vriend van wie vader en grootvader met kille, harde hand regeerden. Toen deze vriend zelf vader werd en die kille reflexen voelde opkomen, koos hij ervoor transitiepersoon te worden: hij stapte tussen prikkel en respons, bood zijn excuses aan en omhelsde zijn kind met 'Ik houd van je' – waardoor een generaties lange familietraditie van kilheid definitief werd doorbroken.",
+        takeaways: [
+          "Word een transitiepersoon: Gebruik je verleden of opvoeding nooit als excuus; kies ervoor om destructieve gewoonten uit het verleden bij jezelf te laten stoppen.",
+          "Intergenerationele impact: Wat je vandaag van binnenuit opbouwt aan karakter en principes, werkt door op je gezin, je team en toekomstige generaties.",
+          "Perfectie is niet het doel: Niemand past de zeven eigenschappen altijd foutloos toe; het draait om het steeds opnieuw terugkeren naar je principes.",
+          "Zaai een eigenschap, oogst een bestemming: Een gedachte vormt een daad, een daad vormt een eigenschap, een eigenschap vormt een karakter, en je karakter bepaalt je levensbestemming."
         ]
       }
     ]
